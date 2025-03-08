@@ -1,0 +1,36 @@
+
+
+.image-container {
+  position: relative;
+}
+
+.opacity-7 {
+  opacity: 0.6; 
+}
+
+.uo {
+  position: absolute; 
+  top: 10%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 100%; 
+}
+
+.sen {
+  font-family: 'Cursive', sans-serif; 
+  color: #333; 
+}
+
+footer {
+  padding-top: 20px; /* Additional padding for the footer */
+}
+a{
+  color: black;
+  padding: 5px;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}

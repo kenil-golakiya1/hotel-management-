@@ -1,0 +1,59 @@
+body {
+  background-color: #ede8dc;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+.mn {
+  border: 3px solid black;
+  border-radius: 5px;
+  height: 590px;
+  width: 600px;
+  font-size: larger;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  margin-left: 50px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ck {
+  display: flex;
+
+  border: 1px solid black;
+  height: 60px;
+  width: 600px;
+  border-radius: 5px;
+}
+.ck label {
+  margin-left: 10px;
+}
+button {
+  font-size: larger;
+  margin-left: 10px;
+  margin-top: 8px;
+  padding: 5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+  margin-left: 500px;
+}
+a{
+  color: black;
+  padding: 5px;
+  font-weight: 500;
+  font-size: larger;
+}
+body{
+  background-color: #C4D7FF;
+}

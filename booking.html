@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header class="text-center py-4" style="background-color:#87A2FF;">
+        <div class="container">
+            <!-- <p class="sen display-4">𝑒𝓃𝑜𝓎 𝓎𝑜𝓊𝓇 𝒽𝒾𝑜𝓁𝒾𝒹𝒶𝓎𝓈</p> -->
+            <a href="https://www.fontspace.com/category/cursive"><img src="https://see.fontimg.com/api/rf5/1GVgg/OTI2YjVlNjExZGJlNDMyMzk3ZTA2YzUxNjIyOGIwYmMudHRm/ZW5qb3kgeW91ciBob2xpZGF5cyA/kingsman-demo.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65" alt="Cursive fonts"></a>
+            <nav class="nav justify-content-center">
+                <a class="nav-link" href="home.html">Home</a>
+                <a class="nav-link" href="rooms.html">Rooms</a>
+                <a class="nav-link" href="food.html">Food</a>
+                <a class="nav-link" href="booking.html">Booking</a>
+                <a class="nav-link" href="about.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container mt-5" style="margin-bottom: 20px;">
+        <form id="booking-form" class="bg-light p-4 border rounded" novalidate>
+            <h2 class="mb-4">Room Booking Form</h2>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name" required pattern="[A-Za-z\s]+" title="Only alphabets are allowed">
+                <div class="invalid-feedback">Please enter your name (alphabets only).</div>
+            </div>
+
+            <div class="form-group">
+                <label for="number">Contact Number:</label>
+                <input type="tel" class="form-control" id="number" placeholder="Enter your contact number" required pattern="\d{10}" title="Please enter a valid 10-digit contact number.">
+                <div class="invalid-feedback">Please enter a valid contact number (10 digits).</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="aadhaar">Aadhaar Number:</label>
+                <input type="text" class="form-control" id="aadhaar" placeholder="Enter your Aadhaar number" required pattern="\d{12}" maxlength="12">
+                <div class="invalid-feedback">Please enter a valid Aadhaar number (12 digits).</div>
+            </div>
+
+            <div class="form-group">
+                <label for="room-type">Room Type:</label>
+                <select class="form-control" id="room-type" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="deluxe">Deluxe Room</option>
+                    <option value="suite">Luxury Suite</option>
+                    <option value="executive">Executive Room</option>
+                    <option value="family">Family Suite</option>
+                    <option value="presidential">Presidential Suite</option>
+                    <option value="honeymoon">Honeymoon Suite</option>
+                </select>
+                <div class="invalid-feedback">Please select a room type.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="people">Number of People:</label>
+                <select class="form-control" id="people" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <div class="invalid-feedback">Please select the number of people.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="checkin">Check-In Date:</label>
+                <input type="date" class="form-control" id="checkin" required />
+                <div class="invalid-feedback">Please select a check-in date.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="checkout">Check-Out Date:</label>
+                <input type="date" class="form-control" id="checkout" required />
+                <div class="invalid-feedback">Please select a check-out date.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="extra-services">Extra Services:</label>
+                <select class="form-control" id="extra-services" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="spa">Spa Treatment</option>
+                    <option value="airport-transfer">Airport Transfer</option>
+                    <option value="room-service">24/7 Room Service</option>
+                    <option value="laundry">Laundry Service</option>
+                    <option value="tour-guide">Tour Guide</option>
+                    <option value="breakfast-included">Breakfast Included</option>
+                </select>
+                <div class="invalid-feedback">Please select an extra service.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <select class="form-control" id="payment-method" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="credit-card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="net-banking">Net Banking</option>
+                    <option value="upi">UPI</option>
+                    <option value="cash">Cash</option>
+                    <option value="mobile-wallet">Mobile Wallet</option>
+                </select>
+                <div class="invalid-feedback">Please select a payment method.</div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+    </div>
+    <footer class="bg-light text-dark mt-5 pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Facilities</h2>
+                    <ul class="list-unstyled">
+                        <li>Luxury Spa & Wellness Center</li>
+                        <li>Gourmet Dining Restaurant</li>
+                        <li>Infinity Pool & Rooftop Bar</li>
+                        <li>Exclusive Lounge & Library</li>
+                        <li>State-of-the-Art Fitness Center</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h2>Room Types</h2>
+                    <ul class="list-unstyled">
+                        <li>Presidential Suite</li>
+                        <li>Luxury King Room</li>
+                        <li>Deluxe Twin Room</li>
+                        <li>Executive Suite</li>
+                        <li>Honeymoon Suite</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h2>Services</h2>
+                    <ul class="list-unstyled">
+                        <li>24/7 Room Service</li>
+                        <li>Concierge Service</li>
+                        <li>Luxury Transportation</li>
+                        <li>Spa and Wellness Treatments</li>
+                        <li>In-Room Dining Experiences</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h2>Customer Support</h2>
+                    <ul class="list-unstyled">
+                        <li>Email: support@luxuryhotel.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Email: inquiries@luxuryhotel.com</li>
+                        <li>Phone: +1 (555) 987-6543</li>
+                        <li>Email: reservations@luxuryhotel.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center py-4">
+                <p>&copy; 2024 Luxury Hotel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('checkin').setAttribute('min', today);
+        document.getElementById('checkout').setAttribute('min', today);
+
+        document.getElementById("submit").addEventListener("click", function() {
+            const form = document.getElementById('booking-form');
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            const checkin = document.getElementById("checkin").value;
+            const checkout = document.getElementById("checkout").value;
+
+            if (checkin && checkout && new Date(checkout) < new Date(checkin)) {
+                alert("Check-out date must be after the check-in date.");
+                return; 
+            }
+
+            const bookingData = {
+                name: document.getElementById('name').value,
+                number: document.getElementById('number').value,
+                email: document.getElementById('email').value,
+                aadhaar: document.getElementById('aadhaar').value,
+                roomType: document.getElementById('room-type').value,
+                people: document.getElementById('people').value,
+                checkin: checkin,
+                checkout: checkout,
+                extraServices: document.getElementById('extra-services').value,
+                paymentMethod: document.getElementById('payment-method').value
+            };
+
+            localStorage.setItem('bookingData', JSON.stringify(bookingData));
+
+            alert("Your room is booked!");
+            window.location.href = 'bill.html';
+        });
+    </script>
+</body>
+</html>

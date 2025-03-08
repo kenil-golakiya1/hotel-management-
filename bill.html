@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Bill</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Custom styles for the Bill page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #87A2FF;
+            color: black;
+            /* border-bottom: 5px solid #0056b3; */
+        }
+        .sen {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        .bill-table th, .bill-table td {
+            text-align: left;
+            padding: 12px 15px;
+        }
+        .bill-table th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+        }
+        .bill-table td {
+            border-bottom: 1px solid #ddd;
+        }
+        .bill-content {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .total-bill {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #007bff;
+            margin-top: 20px;
+        }
+        .btn-back {
+            margin-top: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #555;
+        }
+        .nav-link {
+            color: black !important;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+        /* Hover effect for the bill table */
+        .bill-table tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        /* Button transition effects */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+        body{
+  background-color: #C4D7FF;
+}
+    </style>
+</head>
+<body>
+
+<header class="text-center py-4">
+    <div class="container">
+        <!-- <p class="sen display-4"></p> -->
+        <a href="https://www.fontspace.com/category/cursive"><img src="https://see.fontimg.com/api/rf5/1GVgg/OTI2YjVlNjExZGJlNDMyMzk3ZTA2YzUxNjIyOGIwYmMudHRm/ZW5qb3kgeW91ciBob2xpZGF5cyA/kingsman-demo.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65" alt="Cursive fonts"></a>
+        <nav class="nav justify-content-center" >
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="rooms.html">Rooms</a>
+            <a class="nav-link" href="food.html">Food</a>
+            <a class="nav-link" href="booking.html">Booking</a>
+            <a class="nav-link" href="about.html">About Us</a>
+        </nav>
+    </div>
+</header>
+<!-- <hr /> -->
+
+<div class="container mt-5" id="bill-content">
+    <!-- Bill details will be inserted here by JavaScript -->
+</div>
+
+<div class="btn-back text-center">
+    <a href="home.html" class="btn btn-primary">Back to home</a>
+</div>
+
+<footer class="bg-light text-dark mt-5 pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Facilities</h2>
+                <ul class="list-unstyled">
+                    <li>Luxury Spa & Wellness Center</li>
+                    <li>Gourmet Dining Restaurant</li>
+                    <li>Infinity Pool & Rooftop Bar</li>
+                    <li>Exclusive Lounge & Library</li>
+                    <li>State-of-the-Art Fitness Center</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h2>Room Types</h2>
+                <ul class="list-unstyled">
+                    <li>Presidential Suite</li>
+                    <li>Luxury King Room</li>
+                    <li>Deluxe Twin Room</li>
+                    <li>Executive Suite</li>
+                    <li>Honeymoon Suite</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h2>Services</h2>
+                <ul class="list-unstyled">
+                    <li>24/7 Room Service</li>
+                    <li>Concierge Service</li>
+                    <li>Luxury Transportation</li>
+                    <li>Spa and Wellness Treatments</li>
+                    <li>In-Room Dining Experiences</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h2>Customer Support</h2>
+                <ul class="list-unstyled">
+                    <li>Email: support@luxuryhotel.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Email: inquiries@luxuryhotel.com</li>
+                    <li>Phone: +1 (555) 987-6543</li>
+                    <li>Email: reservations@luxuryhotel.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center py-4">
+            <p>&copy; 2024 Luxury Hotel. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    window.onload = function() {
+        const bookingData = JSON.parse(localStorage.getItem('bookingData'));
+        
+        if (bookingData) {
+            // Room prices (adjust as necessary)
+            const roomPrices = {
+                'deluxe': 100,
+                'suite': 200,
+                'executive': 150,
+                'family': 250,
+                'presidential': 500,
+                'honeymoon': 300
+            };
+
+            // Calculate the number of stay days
+            const checkinDate = new Date(bookingData.checkin);
+            const checkoutDate = new Date(bookingData.checkout);
+            const stayDays = Math.ceil((checkoutDate - checkinDate) / (1000 * 3600 * 24));
+
+            // Get the room price based on selected room type
+            const roomPrice = roomPrices[bookingData.roomType] || 0;
+            const totalBill = roomPrice * stayDays;
+
+            // Render the bill content
+            const billContent = `
+                <div class="bill-content">
+                    <h2 class="text-center mb-4">Booking Confirmation - Bill</h2>
+                    <table class="table table-bordered bill-table mt-4">
+                        <thead>
+                            <tr>
+                                <th>Details</th>
+                                <th>Information</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Name:</td><td>${bookingData.name}</td></tr>
+                            <tr><td>Contact Number:</td><td>${bookingData.number}</td></tr>
+                            <tr><td>Email ID:</td><td>${bookingData.email}</td></tr>
+                            <tr><td>Aadhaar Number:</td><td>${bookingData.aadhaar}</td></tr>
+                            <tr><td>Room Type:</td><td>${bookingData.roomType}</td></tr>
+                            <tr><td>Number of People:</td><td>${bookingData.people}</td></tr>
+                            <tr><td>Check-In Date:</td><td>${bookingData.checkin}</td></tr>
+                            <tr><td>Check-Out Date:</td><td>${bookingData.checkout}</td></tr>
+                            <tr><td>Extra Services:</td><td>${bookingData.extraServices}</td></tr>
+                            <tr><td>Payment Method:</td><td>${bookingData.paymentMethod}</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="total-bill">
+                        <p>Total Bill: $${totalBill}</p>
+                        <p>Stay Duration: ${stayDays} days</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('bill-content').innerHTML = billContent;
+        } else {
+            window.location.href = 'booking.html';
+        }
+    };
+</script>
+
+</body>
+</html>

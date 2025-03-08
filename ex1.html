@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+      <form id="registrationForm"> <!-- Added an ID for the form -->
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Name" required pattern="[A-Za-z\s]+"> <!-- Removed extra space in ID -->
+            <div class="invalid-feedback">Please provide a valid name.</div> <!-- Clarified feedback message -->
+        </div>
+
+        <div class="form-group">
+            <label for="number">Phone Number</label>
+            <input type="tel" id="number" class="form-control" placeholder="Number" required pattern="\d{10}" maxlength="10"> <!-- Removed extra space in ID -->
+            <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div> <!-- Clarified feedback message -->
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Email" required pattern=".*@.*"> <!-- Removed extra space in ID -->
+            <div class="invalid-feedback">Please provide a valid email.</div> <!-- Clarified feedback message -->
+        </div>
+
+        <div class="form-group">
+            <label for="aadhar">Aadhar</label>
+            <input type="text" id="aadhar" class="form-control" required pattern="\d{12}" maxlength="12" placeholder="Aadhar Number"> <!-- Removed extra space and added placeholder -->
+            <div class="invalid-feedback">Please provide a valid 12-digit Aadhar number.</div> <!-- Clarified feedback message -->
+        </div>
+
+        <div class="form-group">
+            <label for="car">Car</label>
+            <select id="car" class="form-control" required> <!-- Added ID for select element -->
+                <option value="">Select a car</option>
+                <option value="1">Car 1</option>
+                <option value="2">Car 2</option>
+            </select>
+            <div class="invalid-feedback">Please select a car.</div> <!-- Clarified feedback message -->
+        </div>
+        <div class="form-group">
+            <label for="checkin">Check-In Date:</label>
+            <input type="date" class="form-control" id="checkin" required />
+            <div class="invalid-feedback">Please select a check-in date.</div>
+        </div>
+        <div class="form-group">
+            <label for="checkin">password</label>
+            <input type="password" class="form-control" id="password" required />
+            <div class="invalid-feedback">password</div>
+        </div>
+
+
+        <button type="submit" class="sub btn btn-primary">Submit</button> <!-- Added Bootstrap button classes -->
+      </form>
+    </div>
+
+   <script>
+        document.querySelector(".sub").addEventListener("click",(e)=>{
+            e.preventDefault();
+          var name=document.getElementById("name").value;
+          var number=document.getElementById("number").value;
+          var email=document.getElementById("email").value;
+          var aadhar=document.getElementById("aadhar").value;
+          var car=document.getElementById("car").value;
+
+          if(name && number && email && aadhar && car )
+          {
+            alert("okk")
+          }
+          else
+          {
+            alert("not okk ")
+          }
+
+
+
+
+
+        })
+    
+   </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

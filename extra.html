@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+      <form action="">
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" id="name " value="" class="form-control" placeholder="name" required pattern="[A-Za-z\c]+">
+        <div class="invalid-feedback"> name </div>
+
+
+        </div>
+        <div class="form-group">
+            <label for="number">number</label>
+            <input type="tel" id="number " value="" class="form-control" placeholder="number" required pattern="\d{10}" maxlength="10">
+        <div class="invalid-feedback"> number </div>
+
+
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" id="email " value="" class="form-control" placeholder="email" required  pattern=".*@.*">
+        <div class="invalid-feedback"> email</div>
+
+
+        </div>
+
+        <div class="form-group">
+            <label for="aadar">aadhaar</label>
+            <input type="text" id="aadhar" value="" class="form-control" required pattern="\d{12}" maxlength="12">
+            <div class="invalid-feedback"> aadhaar </div>
+
+
+        </div>
+        <div class="form-group">
+            <label for="email">car</label>
+           <select name="" class="form-control" id="qw">
+            <option value="1">1</option>
+            <option value="2">2</option>
+           </select>
+
+
+
+        </div>
+        
+
+
+
+
+<button type="submit"  class="sub">submit</button>
+      </form>
+
+</body>
+<!-- <script>
+    document.querySelector(".sub").addEventListener("click",()=>{
+ 
+     alert("submit")
+    })
+ 
+ 
+ 
+ 
+     </script> -->
+     <script>
+        document.querySelector(".sub").addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent form submission
+            
+            var name = document.getElementById("name").value;
+            var number = document.getElementById("number").value;
+            var email = document.getElementById("email").value;
+            var aadhar = document.getElementById("aadhar").value;
+            var car = document.getElementById("car").value;
+
+            if (name && number && email && aadhar && car) {
+                alert("Form submitted successfully!");
+            } else {
+                alert("Please fill all fields");
+            }
+        });
+    </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

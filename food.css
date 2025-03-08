@@ -1,0 +1,101 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ede8dc;
+  margin: 0;
+  padding: 0px;
+}
+
+.menu-container {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+/* Main title */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Menu part styles */
+.menu-part {
+  background-color: #f8f9fa; /* Light background for menu parts */
+  border: 1px solid #dee2e6; /* Border for menu parts */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+/* Category styles */
+.menu-category h2 {
+  font-size: 1.8em;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* List styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+li:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+/* Item name and price styles */
+.item-name {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .menu-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .menu-category h2 {
+    font-size: 1.5em;
+  }
+
+  .item-name {
+    font-size: 1em;
+  }
+
+  .item-price {
+    font-size: 1em;
+  }
+}
+a{
+  color: black;
+  padding: 5px;
+  font-weight: 500;
+  font-size: larger;
+}
+body{
+  background-color: #C4D7FF;
+}
